@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Name Manipulation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="registery">
+    <div class="notice">
+      <p>Now you can remove/unblock user names. &times;</p>
+    </div>
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm80 256l64 0c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16L80 384c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
+      </svg>
+    </div>
+    <div><input class="regInput" type="text" placeholder="Enter a username..."></div>
+    <button class="regBtn" type="submit" onclick="register()">Register</button>
+  </div>
+
+  <div class="container">
+    <h4>Check user name availability :</h4>
+    <input type="text" id="input" placeholder="Add user name...">
+    <button style="background: rgba(22, 119, 248, 1); color: #fff" onclick="checkingUser()">Check Availability</button>
+    <button style="background: crimson; color: #fff" onclick="blockingUser()">Block</button>
+  </div>
+
+  <div class="userList">
+    <span class="tools">
+    <span class="sortUp"><img class="svg" src="imgs/sortUp.svg" alt=""></span>
+    <span class="sortDown"><img class="svg" src="imgs/sortDown.svg" alt=""></span>
+    <span class="wordCount"><img class="svg" src="imgs/num.svg" alt=""></span>
+    <span class="totalWords">000</span>
+    <span class="filteredSearch"><input placeholder="Search user..." type="text"><img class="svg" src="imgs/search.svg" alt=""></span>
+    </span>
+    <div class="temp">
+  </div>
+  </div>
+
+  <div class="blockedList">
+    <div class="progress-bar temp"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
