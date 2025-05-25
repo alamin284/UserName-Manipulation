@@ -13,13 +13,13 @@ let filteredSearch = document.querySelector('.filteredSearch input');
 let filteredSearchBtn = document.querySelector('.filteredSearch img')
 let isRegister = false;
 
-
 window.onload = () => {
   users = localStorage.getItem('usersArray').split(",");
   blockedUsers = localStorage.getItem('blockedArray').split(",");
   regInput.value = localStorage.getItem("regInput");
   register();
 }
+
 
 
 function register() {
@@ -222,6 +222,8 @@ function blockingUser() {
         userInput.value = '';
         updateUser();
         updateBlockedUser();
+        localStorage.setItem("usersArray", users);
+        localStorage.setItem("blockedArray", blockedUsers);
       } else {
         alert(`Added to the block list.`);
         blockedUsers.push(userInput.value);
